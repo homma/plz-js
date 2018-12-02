@@ -24,7 +24,5 @@ const RPAREN = string(")");
 const PLUS = string("+");
 const MINUS = string("-");
 const TIMES = string("*");
+const VAR = regexp(/[a-zA-Z]+/);
 const EOF = eof();
-
-// not yet determined how to handle this.
-// const VAR =
