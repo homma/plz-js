@@ -1,11 +1,13 @@
 /* Abstract syntax. */
 
-/* types */
+/*** types ***/
 
 /*
  * Integers
  */
-const TInt = function() {};
+const TInt = function() {
+  // this.type = "ty";
+};
 
 /*
  * Booleans
@@ -20,28 +22,29 @@ const TArrow = function(t1, t2) {
   this.type2 = t2;
 };
 
-/* expressions */
+/*** expressions ***/
 
 /*
  * n (string) : variable name
  */
 const Var = function(n) {
+  // this.type = "expr";
   this.name = n;
-}
+};
 
 /*
  * i (int) : integer value
  */
 const Int = function(i) {
   this.int = i;
-}
+};
 
 /*
  * b (bool) : bool value
  */
 const Bool = function(b) {
   this.bool = b;
-}
+};
 
 /*
  * l (int) : left hand value
@@ -50,27 +53,27 @@ const Bool = function(b) {
 const Times = function(l, r) {
   this.lval = l;
   this.rval = r;
-}
+};
 
 const Plus = function(l, r) {
   this.lval = l;
   this.rval = r;
-}
+};
 
 const Minus = function(l, r) {
   this.lval = l;
   this.rval = r;
-}
+};
 
 const Equal = function(l, r) {
   this.lval = l;
   this.rval = r;
-}
+};
 
 const Less = function(l, r) {
   this.lval = l;
   this.rval = r;
-}
+};
 
 /*
  * cond : condition
@@ -81,7 +84,7 @@ const If = function(c, t, e) {
   this.cond = c;
   this.then = t;
   this.elss = e;
-}
+};
 
 /*
  * n (string) : function name
@@ -96,16 +99,16 @@ const Fun = function(n, a, at, ft, e) {
   this.arg_ty = at;
   this.fun_ty = ft;
   this.expr = e;
-}
+};
 
-/* Toplevel commands */
+/*** Toplevel commands ***/
 
 /*
  * Expressions
  */
 const Expr = function(e) {
   this.expr = e;
-}
+};
 
 /*
  * Value definition [let x = e]
@@ -113,4 +116,4 @@ const Expr = function(e) {
 const Def = function(n, e) {
   this.name = n;
   this.expr = e;
-}
+};

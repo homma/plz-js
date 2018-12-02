@@ -348,11 +348,9 @@ const notp = parser => input => {
 
 export //
 const eof = () => input => {
-
   const parser = notp(any1());
   return parser(input);
-
-}
+};
 
 /*** utility functions ***/
 
