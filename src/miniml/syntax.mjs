@@ -1,3 +1,4 @@
+/* Abstract syntax. */
 
 /* types */
 
