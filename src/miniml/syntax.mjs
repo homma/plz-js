@@ -108,7 +108,7 @@ const Fun = function(n, a, at, ft, e) {
 const Apply = function(f, a) {
   this.fun = f;
   this.arg = a;
-}
+};
 
 /*** Toplevel commands ***/
 

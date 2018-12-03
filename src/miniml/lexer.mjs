@@ -1,5 +1,18 @@
 import { or, regexp, string, eof } from "./parser_combinator";
 
+const keyword = [
+  "int",
+  "bool",
+  "true",
+  "false",
+  "fun",
+  "is",
+  "if",
+  "then",
+  "else",
+  "let"
+];
+
 // skip spaces
 const SPACE = regexp(/[ \t\r\n]/);
 
